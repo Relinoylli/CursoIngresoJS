@@ -7,6 +7,7 @@ function MostrarAumento()
 	// variables que voy a usar
 	var sueldoBase;
 	var aumento;
+	var sueldoConAumento;
 	// Asigno el sueldo a aumentar
 	sueldoBase = document.getElementById('sueldo').value;
 	// convierto de string a int
@@ -14,7 +15,7 @@ function MostrarAumento()
 	// Asigno el porcentaje a la variable aumento
 	aumento = (sueldoBase * 10)/ 100;
 	// aplico el aumento al saldo
-	sueldoBase = sueldoBase + aumento; 
+	sueldoConAumento = sueldoBase + aumento; 
 	// Aplico el resultado a la casilla de texto.
-	document.getElementById("resultado").value = sueldoBase;
+	document.getElementById("resultado").value = sueldoConAumento;
 }

@@ -7,6 +7,7 @@ function MostrarAumento()
 	// variables que voy a usar
 	var precioBase;
 	var descuento;
+	var precioFinal;
 	// Asigno el sueldo a aumentar
 	precioBase = document.getElementById('importe').value;
 	// convierto de string a int
@@ -14,7 +15,7 @@ function MostrarAumento()
 	// Asigno el porcentaje a la variable aumento
 	descuento = (precioBase * 25)/ 100;
 	// aplico el aumento al saldo
-	precioBase = precioBase - descuento; 
+	precioFinal = precioBase - descuento; 
 	// Aplico el resultado a la casilla de texto.
-	document.getElementById("resultado").value = precioBase;
+	document.getElementById("resultado").value = precioFinal;
 }
