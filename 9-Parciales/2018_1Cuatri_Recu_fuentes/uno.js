@@ -1,5 +1,5 @@
 
-function Mostrar()
+function mostrar()
 {
 	// declaro las variables que voy a usar
 	var base;

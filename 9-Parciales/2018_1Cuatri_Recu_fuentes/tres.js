@@ -1,4 +1,4 @@
-function Mostrar()
+function mostrar()
 {
 	// declaro las variables
 	var precio;
