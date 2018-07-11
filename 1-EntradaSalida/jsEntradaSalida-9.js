@@ -11,7 +11,7 @@ function mostrarAumento()
 	// Asigno el sueldo a aumentar
 	sueldoBase = document.getElementById('sueldo').value;
 	// convierto de string a int
-	sueldoBase = parseInt(sueldoBase)
+	sueldoBase = parseInt(sueldoBase);
 	// Asigno el porcentaje a la variable aumento
 	aumento = (sueldoBase * 10)/ 100;
 	// aplico el aumento al saldo
