@@ -10,5 +10,80 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+	var cantidad;
+ 	var precioBase = 0;
+ 	var precioDescontado;
+ 	var descuento;
+ 	var impuesto;
+ 	var precioFinal;
+ 	var marca
+
+ 	cantidad = document.getElementById('Cantidad').value;
+ 	cantidad = parseInt(cantidad);
+
+ 	marca = document.getElementById("Marca").value;
+ 	precioBase = precioBase + 35 * cantidad;
+
+ 	switch(cantidad)
+ 	{
+ 		case 0:
+ 			alert("Por Favor Espicificar la cantidad");
+ 			return;
+ 		case 5:
+ 			if(marca == "ArgentinaLuz")
+ 			{
+ 				descuento = precioBase * 0.4;
+ 			}
+ 			else
+ 			{
+ 				descuento = precioBase * 0.3;
+ 			}
+ 			break;
+ 		case 4:
+ 			if(marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+ 			{
+ 				descuento = precioBase * 0.25;
+ 			}
+ 			else
+ 			{
+ 				descuento = precioBase * 0.2;
+ 			}
+ 			break;
+ 		case 3:
+ 			if(marca == "ArgentinaLuz")
+ 			{
+ 				descuento = precioBase * 0.15;
+ 			}
+ 			else if (marca == "FelipeLamparas")
+ 			{
+ 				descuento = precioBase * 0.1;
+ 			}
+ 			else
+ 			{
+ 				descuento = precioBase * 0.05;
+ 			}
+ 			break;
+ 		default:
+ 			if(cantidad >= 6 )
+ 			{
+ 				descuento = precioBase * 0.5;
+ 			}
+ 			else
+ 			{
+ 				precioFinal = precioBase;
+ 				document.getElementById("precioDescuento").value = precioFinal;
+ 				return;
+ 			}
+ 			break;
+ 	}
+
+ 	precioFinal = precioBase - descuento;
+
+ 	if(precioFinal > 120)
+ 	{
+ 		impuesto = precioDescontado * 0.1;
+ 		alert("Usted pago " + impuesto + " de IIBB.");
+ 		precioFinal = precioDescontado + impuesto;
+ 	}
+ 	document.getElementById("precioDescuento").value = precioFinal;
 }
