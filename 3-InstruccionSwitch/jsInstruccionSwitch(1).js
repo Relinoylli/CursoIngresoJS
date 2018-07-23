@@ -1,9 +1,10 @@
 function mostrar()
 {
-	
+	// tomo el mes del año
 	var mesDelAño = document.getElementById('mes').value;
-
-	switch(mesDelAño){
+	// me fijo si esta el la lista el valor
+	switch(mesDelAño)
+	{
 		case "Enero":
 			alert("que comiences bien el año!!!.")
 			break;
@@ -16,7 +17,7 @@ function mostrar()
 		case "Diciembre":
 			alert("Felices fiesta!!!.")
 			break;
-}
+	}
 
 
 
