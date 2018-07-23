@@ -8,7 +8,8 @@
 body {
   margin: 0 auto;
   color:#f0f0f0;
-  background:#3f51b5;
+  /*Color mas tolerable para la vista*/
+  background:#999999;
   font-family:'Open Sans',sans-serif;
 }
 
