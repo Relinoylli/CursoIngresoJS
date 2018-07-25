@@ -44,9 +44,43 @@ function CalcularPrecio ()
  					break;
  			}
  			break;
+ 		case 4:
+ 			switch(marca)
+ 			{
+ 				case "ArgentinaLuz":
+ 					descuento -= 0.25;
+ 					break;
+ 				default:
+ 					descuento -= 0.20;
+ 					break;
+ 			}
+ 			break;
+ 		case 5:
+ 			switch(marca)
+ 			{
+ 				case "ArgentinaLuz":
+ 				case "FelipeLamparas":
+ 					descuento -= 0.40;
+ 					break;
+ 				default:
+ 					descuento -= 0.30;
+ 					break;
+ 			}
+ 			break;
+		default:
+			if(cantidad > 5)
+			{
+				descuento -= 0.50;
+			}
+			else
+			{
+				alert("Por favor NO use numeros negativos.");
+				return;
+			}
+			break;
  	}
 
- 	precioFinal = precioBase * descuento;
+ 	precioDescontado = precioBase * descuento;
 
  	/* switch(cantidad)
  	{
@@ -97,9 +131,7 @@ function CalcularPrecio ()
  			}
  			break;
  	} 
-
- 	precioDescontado = precioBase - descuento;
-
+	*/
  	if(precioDescontado > 120)
  	{
  		impuesto = precioDescontado * 0.1;
@@ -109,6 +141,6 @@ function CalcularPrecio ()
  	else
  	{
  		precioFinal = precioDescontado;
- 	}*/
+ 	}
  	document.getElementById("precioDescuento").value = precioFinal;
 }
